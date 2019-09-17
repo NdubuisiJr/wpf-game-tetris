@@ -1,0 +1,4 @@
+C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Infrastructure\bin\Debug\Tetris.Infrastructure.dll
+C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Infrastructure\bin\Debug\Tetris.Infrastructure.pdb
+C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Infrastructure\obj\Debug\Tetris.Infrastructure.dll
+C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Infrastructure\obj\Debug\Tetris.Infrastructure.pdb

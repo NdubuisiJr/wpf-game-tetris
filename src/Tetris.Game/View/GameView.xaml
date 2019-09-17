@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Tetris.Game.View.GameView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:control="clr-namespace:Tetris.Game.Control"
+             xmlns:local="clr-namespace:Tetris.Game.View">
+    <UserControl.InputBindings>
+        <KeyBinding Command="{Binding MoveDownCommand}" Key="Down"/>
+        <KeyBinding Command="{Binding RightMoveCommand}" Key="Right"/>
+        <KeyBinding Command="{Binding LeftMoveCommand}" Key="Left"/>
+        <KeyBinding Command="{Binding UpRotateCommand}" Key="Up"/>
+    </UserControl.InputBindings>
+    <Grid>
+        <control:CustomCanvas Margin="0,0,0,20" x:Name="_canvas" ClipToBounds="True" Focusable="True"/>
+    </Grid>
+</UserControl>

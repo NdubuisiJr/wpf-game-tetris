@@ -1,0 +1,4 @@
+C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Data\bin\Debug\Tetris.Data.dll
+C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Data\bin\Debug\Tetris.Data.pdb
+C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Data\obj\Debug\Tetris.Data.dll
+C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Data\obj\Debug\Tetris.Data.pdb
