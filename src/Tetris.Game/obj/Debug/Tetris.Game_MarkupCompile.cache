@@ -4,17 +4,17 @@
 library
 C#
 .cs
-C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Game\obj\Debug\
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Game\obj\Debug\
 Tetris.Game
 none
 false
 DEBUG;TRACE
 
-41693108942
+3-1027568140
 
-11-789806160
-71-1139240907
-Control\Bricks.xaml;View\GameView.xaml;View\HomeView.xaml;View\ScoreView.xaml;
+131981903328
+71-1596273954
+View\GameView.xaml;View\HomeView.xaml;View\ScoreView.xaml;
 
 False
 

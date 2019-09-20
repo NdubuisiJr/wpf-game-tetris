@@ -4,3 +4,9 @@ C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Test\bin\Debug\nunit.framework.dll
 C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Test\bin\Debug\nunit.framework.xml
 C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Test\obj\Debug\Tetris.Test.dll
 C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Test\obj\Debug\Tetris.Test.pdb
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Test\bin\Debug\Tetris.Test.dll
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Test\bin\Debug\Tetris.Test.pdb
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Test\bin\Debug\nunit.framework.dll
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Test\bin\Debug\nunit.framework.xml
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Test\obj\Debug\Tetris.Test.dll
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Test\obj\Debug\Tetris.Test.pdb

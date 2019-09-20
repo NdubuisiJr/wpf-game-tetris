@@ -69,12 +69,12 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control\Bricks.xaml.cs">
-      <DependentUpon>Bricks.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Control\CustomCanvas.cs" />
     <Compile Include="GameModule.cs" />
+    <Compile Include="Intefaces\IBrickNavigator.cs" />
+    <Compile Include="Intefaces\INavigationRules.cs" />
     <Compile Include="Model\Forge.cs" />
+    <Compile Include="Model\SquareBrickNavigator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -122,10 +122,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Control\Bricks.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="View\GameView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -1,36 +1,43 @@
 ﻿using Prism.Commands;
-using System.Windows.Controls;
 using System.Windows.Input;
 using Tetris.Game.Control;
 using Tetris.Game.Model;
 using Tetris.Infrastructure;
-using System.Windows.Media;
-using System;
 using System.Threading;
 using System.ComponentModel;
+using System.Collections.Generic;
+using System.Windows.Shapes;
+using System.Linq;
+using Tetris.Game.Intefaces;
 
 namespace Tetris.Game.ViewModel {
     public class GameViewModel {
         public GameViewModel(CustomCanvas canvas) {
+            _brickNavigators = new List<IBrickNavigator> {
+                new SquareBrickNavigator()
+            };
             _canvas = canvas;
             _canvas.MouseDown += _canvas_MouseDown;
             MoveDownCommand = new DelegateCommand(MoveDownAction);
+            /*
             RightMoveCommand = new DelegateCommand(RightMoveAction);
             LeftMoveCommand = new DelegateCommand(LeftMoveAction);
             UpRotateCommand = new DelegateCommand(UpRotateAction);
+            */
             _forge = new Forge();
             worker = new BackgroundWorker();
             worker.DoWork += Worker_DoWork;
             worker.WorkerReportsProgress = true;
             worker.ProgressChanged += Worker_ProgressChanged;
             worker.RunWorkerCompleted += Worker_RunWorkerCompleted;
+            _activeRects = new List<Rectangle>();
         }
 
         private void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) {
-            if (_brickCounter>=10) {
+            if (_brickCounter >= 10) {
                 return;
             }
-            _brickCounter += 1;
+            _brickCounter++;
             StartGame();
         }
 
@@ -40,11 +47,12 @@ namespace Tetris.Game.ViewModel {
 
         private void Worker_DoWork(object sender, DoWorkEventArgs e) {
             for (int i = 0; i < 20; i++) {
-                Thread.Sleep(300);
+                Thread.Sleep(1000);
                 worker.ReportProgress(i);
             }
         }
 
+        /*
         private void UpRotateAction() {
             var rotateTransform = new RotateTransform(_angle, _activeShape.ActualHeight / 2, _activeShape.ActualWidth / 2);
             _activeShape.RenderTransform = rotateTransform;
@@ -65,7 +73,7 @@ namespace Tetris.Game.ViewModel {
             }
             Canvas.SetLeft(_activeShape, WidthToMove);
         }
-
+        
         private void RightMoveAction() {
             var WidthToMove = Canvas.GetLeft(_activeShape) + _canvas.GetHorizontalSpacing();
             if (WidthToMove >= 970) {
@@ -73,21 +81,12 @@ namespace Tetris.Game.ViewModel {
             }
             Canvas.SetLeft(_activeShape, WidthToMove);
         }
+        */
+
 
         private void MoveDownAction() {
-            var heightToMove = Canvas.GetTop(_activeShape) + _canvas.GetVerticalSpacing();
-            if (heightToMove >= 590) {
-                return;
-            }
-            Canvas.SetTop(_activeShape, heightToMove);
-        }
-
-        private void MoveDownAction(Grid shape, CustomCanvas canvas) {
-            var heightToMove = Canvas.GetTop(shape) + canvas.GetVerticalSpacing();
-            if (heightToMove >= 590) {
-                return;
-            }
-            Canvas.SetTop(shape, heightToMove);
+            _brickNavigators.First(x => x.IsMatched(_activeShape))
+                            .MoveDown(_activeRects, _canvas);
         }
 
         private void _canvas_MouseDown(object sender, MouseButtonEventArgs e) {
@@ -105,28 +104,25 @@ namespace Tetris.Game.ViewModel {
             _forge.ActualWidth = width;
             _forge.ActualHeight = height;
             GetShapeData();
-            Canvas.SetLeft(_activeShape, width + width + width + width + width + width);
-            Canvas.SetTop(_activeShape, height);
-            _canvas.Children.Add(_activeShape);
+
+            _brickNavigators.First(x => x.IsMatched(_activeShape))
+                            .Position(height, width, _activeRects, _canvas);
             _canvas.Focus();
         }
 
+        
         private void GetShapeData() {
-            var rand = new Random();
-            var number = rand.Next(1, 5);
-
-            if (number==1) {
-                _activeShape = _forge.GetShape(BrickNames.SQUARE);
-            }
-            else if (number==2) {
-                _activeShape = _forge.GetShape(BrickNames.LINE);
-            }
-            else if (number==3) {
-                _activeShape = _forge.GetShape(BrickNames.HALFCROSS);
-            }
-            else if (number==4) {
-                _activeShape = _forge.GetShape(BrickNames.TWOlINE);
-            }
+            //var rand = new Random();
+            //var number = rand.Next(1, 5);
+            var number = 1;
+            switch (number) {
+                case 1:
+                    _activeRects = _forge.ForgeShape(BrickNames.SQUARE);
+                    _activeShape = BrickNames.SQUARE;
+                    break;
+                default:
+                    break;
+            }       
         }
 
         public DelegateCommand MoveDownCommand { get; set; }
@@ -134,11 +130,12 @@ namespace Tetris.Game.ViewModel {
         public DelegateCommand LeftMoveCommand { get; set; }
         public DelegateCommand UpRotateCommand { get; set; }
 
+        private string _activeShape;
         private int _brickCounter = 0;
-        private int _angle = 90;
         private CustomCanvas _canvas;
         private Forge _forge;
-        private Grid _activeShape;
         private BackgroundWorker worker;
+        private IEnumerable<Rectangle> _activeRects;
+        private IEnumerable<IBrickNavigator> _brickNavigators;
     }
 }
