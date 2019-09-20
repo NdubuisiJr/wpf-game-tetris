@@ -2,3 +2,7 @@ C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Infrastructure\bin\Debug\Tetris.In
 C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Infrastructure\bin\Debug\Tetris.Infrastructure.pdb
 C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Infrastructure\obj\Debug\Tetris.Infrastructure.dll
 C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Infrastructure\obj\Debug\Tetris.Infrastructure.pdb
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Infrastructure\bin\Debug\Tetris.Infrastructure.dll
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Infrastructure\bin\Debug\Tetris.Infrastructure.pdb
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Infrastructure\obj\Debug\Tetris.Infrastructure.dll
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Infrastructure\obj\Debug\Tetris.Infrastructure.pdb

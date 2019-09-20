@@ -5,3 +5,10 @@ C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Domain\obj\Debug\Tetris.Domain.Pro
 C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Domain\obj\Debug\Tetris.Domain.csproj.GenerateResource.Cache
 C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Domain\obj\Debug\Tetris.Domain.dll
 C:\Users\user\Desktop\LocalRepo\Tetris\Tetris.Domain\obj\Debug\Tetris.Domain.pdb
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Domain\bin\Debug\Tetris.Domain.dll.config
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Domain\bin\Debug\Tetris.Domain.dll
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Domain\bin\Debug\Tetris.Domain.pdb
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Domain\obj\Debug\Tetris.Domain.Properties.Resources.resources
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Domain\obj\Debug\Tetris.Domain.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Domain\obj\Debug\Tetris.Domain.dll
+C:\Users\user\Desktop\LocalRepo\wpf-game-tetris\wpf-game-tetris\src\Tetris.Domain\obj\Debug\Tetris.Domain.pdb

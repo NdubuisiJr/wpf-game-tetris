@@ -4,6 +4,5 @@ namespace Tetris.Domain {
     public class Game {
         public int Score { get; set; }
         public string Name { get; set; }
-        //public IEnumerable<Brick> Bricks { get; set; }
     }
 }
